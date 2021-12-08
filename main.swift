@@ -130,8 +130,33 @@ func reverse ( _ str : String )->String {
     return reversed;
 }
 
-func bmi() {
-    //insert codes
+func bmi(_ weight: Double, _ height: Double) -> String {
+    let index = (weight) / (height * height)
+    if index <= 18.5 {return "Underweight"}
+    if index <= 25.0 {return "Normal"}
+    if index <= 30.0 {return "Overweight"}
+    return "Obese"
+}
+
+print("Enter weight: ")
+let wt = readLine()
+print("Enter height: ")
+let ht = readLine();
+print(bmi(wt,ht));
+
+print("Enter weight: ")
+let wt = readLine()
+print("Enter height: ")
+let ht = readLine()
+
+print(bmi((Double((wt)!))!, (Double((ht)!))!))
+
+func bmi(_ weight: Double, _ height: Double) -> String {
+    let index = (weight) / (height * height)
+    if index <= 18.5 {return "Underweight"}
+    if index <= 25.0 {return "Normal"}
+    if index <= 30.0 {return "Overweight"}
+    return "Obese"
 }
 
 menu() //Calls the main menu() function
