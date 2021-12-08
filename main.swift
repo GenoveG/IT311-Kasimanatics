@@ -95,7 +95,7 @@ func nbDig ( _ n : Int, _ d: Int )->Int {
     for x in 0...n {
         let square = String(x*x);
         let numbers = Array(square);
-        let index = 1;
+        let index = 1; // Changed Index into 0
         for index in index...numbers.count - 1 {
             let digit = Int(String(numbers[index]))
             countDigits += 2;
