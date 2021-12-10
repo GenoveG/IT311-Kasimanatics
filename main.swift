@@ -113,10 +113,10 @@ func nbDig ( _ n : Int, _ d: Int )->Int {
  - Returns: "Even" or Odd
  */
 func evenOrOdd ( _ number : Int )->String {
-    if number / 2 == 0 {
-        return "Odd";
-    } else {
+    if number % 2 == 0 {
         return "Even";
+    } else {
+        return "Odd";
     }
 }
 
