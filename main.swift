@@ -31,7 +31,7 @@ func menu(){
         }
         if choice == "3"	{
             print("\nPlease input an integer number:")
-            let n = readLine();
+            let n = readLine()
             print("\nPlease input a digit (0-9):")
             let d = readLine()
             if let dString = d, let d = Int(dString) {
@@ -67,8 +67,8 @@ func menu(){
  Function for showing a String output of "Hello World!"
  - Returns: "Hello World!" in String type
  */
-func greet()->String {
-    return "Hello World!";
+func greet() -> String {
+    return "Hello World!"
 }
 
 /**
@@ -78,8 +78,8 @@ func greet()->String {
    - b: Double type multiplyer
  - Returns: Multiplied result in Double type
  */
-func multiply ( _ a : Double, _ b : Double )->Double {
-    return a * b;
+func multiply ( _ a : Double, _ b : Double ) -> Double {
+    return a * b
 }
 
 /**
@@ -90,12 +90,12 @@ func multiply ( _ a : Double, _ b : Double )->Double {
    - d: Integer type digit (0-9)
  - Returns: Counted digits in Integer type
  */
-func nbDig ( _ n : Int, _ d: Int )->Int {
+func nbDig ( _ n : Int, _ d : Int ) -> Int {
     var countDigits = 0
     for x in 0...n {
-        let square = String(x*x);
-        let numbers = Array(square);
-        let index = 0; // Changed Index into 0
+        let square = String(x*x)
+        let numbers = Array(square)
+        let index = 0 // Changed Index into 0
         for index in index...numbers.count - 1 {
             let digit = Int(String(numbers[index]))
 
@@ -104,7 +104,7 @@ func nbDig ( _ n : Int, _ d: Int )->Int {
             }
         }
     }
-    return countDigits;
+    return countDigits
 }
 
 /**
@@ -112,11 +112,11 @@ func nbDig ( _ n : Int, _ d: Int )->Int {
  - Parameter number: Integer type number
  - Returns: "Even" or Odd
  */
-func evenOrOdd ( _ number : Int )->String {
+func evenOrOdd ( _ number : Int ) -> String {
     if number % 2 == 0 {
-        return "Even";
+        return "Even"
     } else {
-        return "Odd";
+        return "Odd"
     }
 }
 
@@ -125,12 +125,12 @@ func evenOrOdd ( _ number : Int )->String {
  - Parameter str:
  - Returns: reversed string
  */
-func reverse ( _ str : String )->String {
-    let reversed = String (str.reversed());
-    return reversed;
+func reverse ( _ str : String ) -> String {
+    let reversed = String (str.reversed())
+    return reversed
 }
 
-func bmi(_ weight: Double, _ height: Double) -> String {
+func bmi(_ weight : Double, _ height : Double) -> String {
     let index = (weight) / (height * height)
     if index <= 18.5 {return "Underweight"}
     if index <= 25.0 {return "Normal"}
@@ -141,8 +141,8 @@ func bmi(_ weight: Double, _ height: Double) -> String {
 print("Enter weight: ")
 let wt = readLine()
 print("Enter height: ")
-let ht = readLine();
-print(bmi(wt,ht));
+let ht = readLine()
+print(bmi(wt,ht))
 
 print("Enter weight: ")
 let wt = readLine()
@@ -151,7 +151,7 @@ let ht = readLine()
 
 print(bmi((Double((wt)!))!, (Double((ht)!))!))
 
-func bmi(_ weight: Double, _ height: Double) -> String {
+func bmi(_ weight : Double, _ height : Double) -> String {
     let index = (weight) / (height * height)
     if index <= 18.5 {return "Underweight"}
     if index <= 25.0 {return "Normal"}
